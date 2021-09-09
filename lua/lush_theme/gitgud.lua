@@ -3,8 +3,8 @@ local hsl = lush.hsl
 
 local theme = lush(function()
   local c = {
-    bg         = hsl(216, 30, 7),
-    bg1        = hsl(215, 21, 11),
+    bg         = hsl(215, 21, 11),
+    bg1        = hsl(215, 21, 16),
     bg2        = hsl(207, 13, 14),
     bg3        = hsl(225, 15, 30),
     bg4        = hsl(235, 10, 40),
@@ -14,13 +14,13 @@ local theme = lush(function()
 
     red        = hsl(4, 100, 72),
     blue       = hsl(208, 100, 74),
-    yellow     = hsl(50, 100, 75),
+    yellow     = hsl(50, 80, 75),
     orange     = hsl(28, 90, 64),
     green      = hsl(119, 52, 70),
     aqua       = hsl(207, 100, 82),
     purple     = hsl(269, 100, 83),
 
-    blue_alt   = hsl(213, 59, 21);
+    blue_alt   = hsl(215, 55, 20);
   }
   return {
     Comment      { bg = "NONE", fg = c.gray,  gui = "italic" },
@@ -59,10 +59,10 @@ local theme = lush(function()
     NormalFloat  { bg = c.bg2.da(30), fg = "NONE", gui = "NONE" },
     FloatBorder  { bg = c.bg2.da(30), fg = c.gray, gui = "NONE" },
     NormalNC     { Normal },
-    Pmenu        { bg = c.bg1,        fg = c.gray.da(20), gui = "NONE" },
-    PmenuSel     { bg = c.bg1.li(5), fg = c.white.li(20), gui = "NONE" },
-    PmenuSbar    { bg = c.bg1, fg = "NONE",        gui = "NONE" },
-    PmenuThumb   { bg = c.bg1.li(10), fg = "NONE",        gui = "NONE" },
+    Pmenu        { bg = c.bg1.da(10),   fg = c.gray.da(20),  gui = "NONE" },
+    PmenuSel     { bg = c.bg1.li(5),    fg = c.white.li(20), gui = "NONE" },
+    PmenuSbar    { bg = c.bg1,          fg = "NONE",         gui = "NONE" },
+    PmenuThumb   { bg = c.bg1.li(10),   fg = "NONE",         gui = "NONE" },
     Question     { MoreMsg },
     QuickFixLine { CursorLine },
     SpecialKey   { bg = "NONE", fg = c.blue,   gui = "bold" },
@@ -93,7 +93,7 @@ local theme = lush(function()
     Conditional    { fg = c.red  },
     Repeat         { fg = c.purple  },
     Label          { fg = c.purple  },
-    Operator       { fg = c.red },
+    Operator       { fg = c.aqua },
     Keyword        { fg = c.red  },
     Exception      { fg = c.purple  },
 
@@ -103,7 +103,7 @@ local theme = lush(function()
     Macro          { PreProc },
     PreCondit      { PreProc },
 
-    Type           { fg = c.orange },
+    Type           { fg = c.white.da(10) },
     StorageClass   { fg = c.red },
     Structure      { fg = c.aqua },
     Typedef        { Type },
@@ -169,14 +169,14 @@ local theme = lush(function()
     TSCharacter           { Character }, -- characters.
     TSComment             { Comment   }, -- comment blocks.
     luaTSConstructor      { bg = "NONE", fg = c.white.da(25) }, -- override Lua curly braces
-    TSConstructor         { bg = "NONE", fg = c.blue },       -- For constructor calls and definitions: `{ }` in Lua, and Java constructors.
+    TSConstructor         { Type },       -- For constructor calls and definitions: `{ }` in Lua, and Java constructors.
     TSConditional         { Conditional }, -- keywords related to conditionnals.
     TSConstant            { Constant    }, -- constants
     TSConstBuiltin        { Constant    }, -- constant that are built in the language: `nil` in Lua.
     TSConstMacro          { Macro       }, -- constants that are defined by macros: `NULL` in C.
     TSException           { Exception   }, -- exception related keywords.
     TSError               { bg = "NONE", fg = "NONE" }, -- For syntax/parser errors.
-    TSField               { bg = "NONE", fg = c.white.da(10) }, -- For fields.
+    TSField               { bg = "NONE", fg = c.blue }, -- For fields.
     TSFloat               { Float    }, -- floats.
     TSFunction            { Function }, -- function (calls and definitions).
     TSFuncBuiltin         { Function }, -- builtin functions: `table.insert` in Lua.
@@ -190,7 +190,7 @@ local theme = lush(function()
     -- TSNone                { },    -- TODO: docs
     TSNumber              { Number      }, -- all numbers
     TSOperator            { Operator    }, -- any operator: `+`, but also `->` and `*` in C.
-    TSParameter           { fg = c.orange }, -- parameters of a function.
+    TSParameter           { fg = c.white }, -- parameters of a function.
     TSParameterReference  { TSParameter }, -- references to parameters of a function.
     TSProperty            { TSField     }, -- Same as `TSField`.
     TSPunctDelimiter      { Delimiter   }, -- delimiters ie: `.`
@@ -210,9 +210,9 @@ local theme = lush(function()
 
     TSTag                 { Tag         }, -- Tags like html tag names.
     htmlTagN              { Delimiter    },
-    htmlEndTagN              { Delimiter    },
+    htmlEndTagN           { Delimiter    },
     htmlTag               { Operator    },
-    htmlEndTag               { Operator    },
+    htmlEndTag            { Operator    },
     htmlTagName           { Tag },
     TSTagAttribute        { fg = c.blue },
     htmlArg               { fg = c.blue },

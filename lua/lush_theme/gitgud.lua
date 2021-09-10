@@ -3,9 +3,9 @@ local hsl = lush.hsl
 
 local theme = lush(function()
   local c = {
-    bg         = hsl(215, 21, 11),
-    bg1        = hsl(215, 21, 16),
-    bg2        = hsl(207, 13, 14),
+    bg         = hsl(215, 15, 14),
+    bg1        = hsl(215, 15, 20),
+    bg2        = hsl(215, 15, 24),
     bg3        = hsl(225, 15, 30),
     bg4        = hsl(235, 10, 40),
 
@@ -20,7 +20,7 @@ local theme = lush(function()
     aqua       = hsl(207, 100, 82),
     purple     = hsl(269, 100, 83),
 
-    blue_alt   = hsl(215, 55, 20);
+    blue_alt   = hsl(215, 55, 25);
   }
   return {
     Comment      { bg = "NONE", fg = c.gray,  gui = "italic" },

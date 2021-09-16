@@ -93,7 +93,7 @@ local theme = lush(function()
     Conditional    { fg = c.red  },
     Repeat         { fg = c.purple  },
     Label          { fg = c.purple  },
-    Operator       { fg = c.aqua },
+    Operator       { fg = c.red },
     Keyword        { fg = c.red  },
     Exception      { fg = c.purple  },
 

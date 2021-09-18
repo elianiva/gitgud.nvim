@@ -136,30 +136,30 @@ local theme = lush(function()
     LspCodeLens { fg = Comment.fg.li(20) },
     LspCodeLensSeparator { fg = Comment.fg.li(20) },
 
-    LspDiagnosticsDefaultError           { bg = "NONE", fg = c.red,    gui = "underline" },
-    LspDiagnosticsDefaultWarning         { bg = "NONE", fg = c.yellow, gui = "underline" },
-    LspDiagnosticsDefaultInformation     { bg = "NONE", fg = c.blue,   gui = "underline" },
-    LspDiagnosticsDefaultHint            { bg = "NONE", fg = c.green,  gui = "underline" },
+    DiagnosticsDefaultError           { bg = "NONE", fg = c.red,    gui = "underline" },
+    DiagnosticsDefaultWarning         { bg = "NONE", fg = c.yellow, gui = "underline" },
+    DiagnosticsDefaultInformation     { bg = "NONE", fg = c.blue,   gui = "underline" },
+    DiagnosticsDefaultHint            { bg = "NONE", fg = c.green,  gui = "underline" },
 
-    LspDiagnosticsVirtualTextError       { LspDiagnosticsDefaultError },
-    LspDiagnosticsVirtualTextWarning     { LspDiagnosticsDefaultWarning },
-    LspDiagnosticsVirtualTextInformation { LspDiagnosticsDefaultInformation },
-    LspDiagnosticsVirtualTextHint        { LspDiagnosticsDefaultHint },
+    DiagnosticsVirtualTextError       { DiagnosticsDefaultError },
+    DiagnosticsVirtualTextWarning     { DiagnosticsDefaultWarning },
+    DiagnosticsVirtualTextInformation { DiagnosticsDefaultInformation },
+    DiagnosticsVirtualTextHint        { DiagnosticsDefaultHint },
 
-    LspDiagnosticsUnderlineError         { fg = "NONE", gui = "underline", sp = c.red },
-    LspDiagnosticsUnderlineWarning       { fg = "NONE", gui = "underline", sp = c.yellow },
-    LspDiagnosticsUnderlineInformation   { fg = "NONE", gui = "underline", sp = c.blue },
-    LspDiagnosticsUnderlineHint          { fg = "NONE", gui = "underline", sp = c.green },
+    DiagnosticsUnderlineError         { fg = "NONE", gui = "underline", sp = c.red },
+    DiagnosticsUnderlineWarning       { fg = "NONE", gui = "underline", sp = c.yellow },
+    DiagnosticsUnderlineInformation   { fg = "NONE", gui = "underline", sp = c.blue },
+    DiagnosticsUnderlineHint          { fg = "NONE", gui = "underline", sp = c.green },
 
-    LspDiagnosticsFloatingError          { fg = c.red,    gui = "NONE" },
-    LspDiagnosticsFloatingWarning        { fg = c.yellow, gui = "NONE" },
-    LspDiagnosticsFloatingInformation    { fg = c.blue,   gui = "NONE" },
-    LspDiagnosticsFloatingHint           { fg = c.green,  gui = "NONE" },
+    DiagnosticsFloatingError          { fg = c.red,    gui = "NONE" },
+    DiagnosticsFloatingWarning        { fg = c.yellow, gui = "NONE" },
+    DiagnosticsFloatingInformation    { fg = c.blue,   gui = "NONE" },
+    DiagnosticsFloatingHint           { fg = c.green,  gui = "NONE" },
 
-    LspDiagnosticsSignError              { fg = c.red,    gui = "NONE" },
-    LspDiagnosticsSignWarning            { fg = c.yellow, gui = "NONE" },
-    LspDiagnosticsSignInformation        { fg = c.blue,   gui = "NONE" },
-    LspDiagnosticsSignHint               { fg = c.green,  gui = "NONE" },
+    DiagnosticsSignError              { fg = c.red,    gui = "NONE" },
+    DiagnosticsSignWarning            { fg = c.yellow, gui = "NONE" },
+    DiagnosticsSignInformation        { fg = c.blue,   gui = "NONE" },
+    DiagnosticsSignHint               { fg = c.green,  gui = "NONE" },
 
     -- Tree-Sitter
 
@@ -284,10 +284,10 @@ local theme = lush(function()
     TabLineSel            { bg = c.blue, fg = c.bg1,  gui = "NONE" },
 
     -- tabline diagnostic
-    TabLineError          { LspDiagnosticsSignError },
-    TabLineWarning        { LspDiagnosticsSignWarning },
-    TabLineHint           { LspDiagnosticsSignHint },
-    TabLineInformation    { LspDiagnosticsSignInformation },
+    TabLineError          { DiagnosticsSignError },
+    TabLineWarning        { DiagnosticsSignWarning },
+    TabLineHint           { DiagnosticsSignHint },
+    TabLineInformation    { DiagnosticsSignInformation },
 
     -- which-key.nvim
     WhichKeyFloat       { bg = c.bg1 },
@@ -308,12 +308,12 @@ local theme = lush(function()
 
     -- nvim-notify
     NotifyERROR      { fg = c.red    },
-    NotifyWARN       { fg = c.orange },
+    NotifyWARN       { fg = c.yellow },
     NotifyINFO       { fg = c.green  },
     NotifyDEBUG      { fg = c.blue   },
     NotifyTRACE      { fg = c.white  },
     NotifyERRORTitle { fg = c.red  },
-    NotifyWARNTitle  { fg = c.orange  },
+    NotifyWARNTitle  { fg = c.yellow  },
     NotifyINFOTitle  { fg = c.green  },
     NotifyDEBUGTitle { fg = c.blue  },
     NotifyTRACETitle { fg = c.white  },

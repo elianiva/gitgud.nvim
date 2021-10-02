@@ -3,7 +3,7 @@ local hsl = lush.hsl
 
 local theme = lush(function()
   local c = {
-    bg         = hsl(215, 15, 14),
+    bg         = hsl(215, 15, 16),
     bg1        = hsl(215, 15, 20),
     bg2        = hsl(215, 15, 24),
     bg3        = hsl(225, 15, 30),
@@ -20,7 +20,7 @@ local theme = lush(function()
     aqua       = hsl(207, 100, 82),
     purple     = hsl(269, 100, 83),
 
-    blue_alt   = hsl(215, 55, 25);
+    blue_alt   = hsl(215, 55, 25),
   }
   return {
     Comment      { bg = "NONE", fg = c.gray,  gui = "italic" },
@@ -133,33 +133,33 @@ local theme = lush(function()
     LspReferenceWrite                    { bg = c.bg1.li(10), fg = "NONE", gui = "underline" },
     LspSignatureActiveParameter          { bg = c.bg1.li(10), fg = c.purple, gui = "underline,bold" },
 
-    LspCodeLens { fg = Comment.fg.li(20) },
+    LspCodeLens          { fg = Comment.fg.li(20) },
     LspCodeLensSeparator { fg = Comment.fg.li(20) },
 
-    DiagnosticsDefaultError           { bg = "NONE", fg = c.red,    gui = "underline" },
-    DiagnosticsDefaultWarning         { bg = "NONE", fg = c.yellow, gui = "underline" },
-    DiagnosticsDefaultInformation     { bg = "NONE", fg = c.blue,   gui = "underline" },
-    DiagnosticsDefaultHint            { bg = "NONE", fg = c.green,  gui = "underline" },
+    DiagnosticError { bg = "NONE", fg = c.red,    gui = "underline" },
+    DiagnosticWarn  { bg = "NONE", fg = c.yellow, gui = "underline" },
+    DiagnosticInfo  { bg = "NONE", fg = c.blue,   gui = "underline" },
+    DiagnosticHint  { bg = "NONE", fg = c.green,  gui = "underline" },
 
-    DiagnosticsVirtualTextError       { DiagnosticsDefaultError },
-    DiagnosticsVirtualTextWarning     { DiagnosticsDefaultWarning },
-    DiagnosticsVirtualTextInformation { DiagnosticsDefaultInformation },
-    DiagnosticsVirtualTextHint        { DiagnosticsDefaultHint },
+    DiagnosticVirtualTextError { DiagnosticError },
+    DiagnosticVirtualTextWarn  { DiagnosticWarn  },
+    DiagnosticVirtualTextInfo  { DiagnosticInfo  },
+    DiagnosticVirtualTextHint  { DiagnosticHint  },
 
-    DiagnosticsUnderlineError         { fg = "NONE", gui = "underline", sp = c.red },
-    DiagnosticsUnderlineWarning       { fg = "NONE", gui = "underline", sp = c.yellow },
-    DiagnosticsUnderlineInformation   { fg = "NONE", gui = "underline", sp = c.blue },
-    DiagnosticsUnderlineHint          { fg = "NONE", gui = "underline", sp = c.green },
+    DiagnosticUnderlineError { fg = "NONE", gui = "underline", sp = c.red    },
+    DiagnosticUnderlineWarn  { fg = "NONE", gui = "underline", sp = c.yellow },
+    DiagnosticUnderlineInfo  { fg = "NONE", gui = "underline", sp = c.blue   },
+    DiagnosticUnderlineHint  { fg = "NONE", gui = "underline", sp = c.green  },
 
-    DiagnosticsFloatingError          { fg = c.red,    gui = "NONE" },
-    DiagnosticsFloatingWarning        { fg = c.yellow, gui = "NONE" },
-    DiagnosticsFloatingInformation    { fg = c.blue,   gui = "NONE" },
-    DiagnosticsFloatingHint           { fg = c.green,  gui = "NONE" },
+    DiagnosticFloatingError { fg = c.red,    gui = "NONE" },
+    DiagnosticFloatingWarn  { fg = c.yellow, gui = "NONE" },
+    DiagnosticFloatingInfo  { fg = c.blue,   gui = "NONE" },
+    DiagnosticFloatingHint  { fg = c.green,  gui = "NONE" },
 
-    DiagnosticsSignError              { fg = c.red,    gui = "NONE" },
-    DiagnosticsSignWarning            { fg = c.yellow, gui = "NONE" },
-    DiagnosticsSignInformation        { fg = c.blue,   gui = "NONE" },
-    DiagnosticsSignHint               { fg = c.green,  gui = "NONE" },
+    DiagnosticSignError { fg = c.red,    gui = "NONE" },
+    DiagnosticSignWarn  { fg = c.yellow, gui = "NONE" },
+    DiagnosticSignInfo  { fg = c.blue,   gui = "NONE" },
+    DiagnosticSignHint  { fg = c.green,  gui = "NONE" },
 
     -- Tree-Sitter
 
@@ -284,10 +284,10 @@ local theme = lush(function()
     TabLineSel            { bg = c.blue, fg = c.bg1,  gui = "NONE" },
 
     -- tabline diagnostic
-    TabLineError          { DiagnosticsSignError },
-    TabLineWarning        { DiagnosticsSignWarning },
-    TabLineHint           { DiagnosticsSignHint },
-    TabLineInformation    { DiagnosticsSignInformation },
+    TabLineError          { DiagnosticSignError },
+    TabLineWarning        { DiagnosticSignWarn },
+    TabLineHint           { DiagnosticSignHint },
+    TabLineInformation    { DiagnosticSignInfo },
 
     -- which-key.nvim
     WhichKeyFloat       { bg = c.bg1 },

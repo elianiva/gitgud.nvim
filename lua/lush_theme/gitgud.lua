@@ -128,10 +128,10 @@ local theme = lush(function()
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
 
-    LspReferenceText                     { bg = c.bg1.li(10), fg = "NONE", gui = "underline" },
-    LspReferenceRead                     { bg = c.bg1.li(10), fg = "NONE", gui = "underline" },
-    LspReferenceWrite                    { bg = c.bg1.li(10), fg = "NONE", gui = "underline" },
-    LspSignatureActiveParameter          { bg = c.bg1.li(10), fg = c.purple, gui = "underline,bold" },
+    LspReferenceText                     { bg = c.bg1.li(6), fg = "NONE", gui = "underline" },
+    LspReferenceRead                     { bg = c.bg1.li(6), fg = "NONE", gui = "underline" },
+    LspReferenceWrite                    { bg = c.bg1.li(6), fg = "NONE", gui = "underline" },
+    LspSignatureActiveParameter          { bg = c.bg1.li(6), fg = c.purple, gui = "underline,bold" },
 
     LspCodeLens          { fg = Comment.fg.li(20) },
     LspCodeLensSeparator { fg = Comment.fg.li(20) },

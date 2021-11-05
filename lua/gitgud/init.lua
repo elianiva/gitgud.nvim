@@ -1,49 +1,31 @@
-local lush = require('lush')
+local lush = require("lush")
 local hsl = lush.hsl
+local c = require("gitgud.palette")
 
+-- palette
 local theme = lush(function()
-  local c = {
-    bg         = hsl(215, 15, 16),
-    bg1        = hsl(215, 15, 20),
-    bg2        = hsl(215, 15, 24),
-    bg3        = hsl(225, 15, 30),
-    bg4        = hsl(235, 10, 40),
-
-    gray       = hsl(231, 9, 55),
-    white      = hsl(210, 17, 82),
-
-    red        = hsl(4, 100, 72),
-    blue       = hsl(208, 100, 74),
-    yellow     = hsl(50, 80, 75),
-    orange     = hsl(28, 90, 64),
-    green      = hsl(119, 52, 70),
-    aqua       = hsl(207, 100, 82),
-    purple     = hsl(269, 100, 83),
-
-    blue_alt   = hsl(215, 55, 25),
-  }
   return {
     Comment      { bg = "NONE", fg = c.gray,  gui = "italic" },
-    Normal       { bg = c.bg, fg = c.white, gui = "NONE"   },
+    Normal       { bg = c.bg,   fg = c.white, gui = "NONE"   },
     CursorLine   { bg = c.bg1,  fg = "NONE",  gui = "NONE"   },
     CursorColumn { CursorLine },
     ColorColumn  { CursorLine },
-    Conceal      { bg = "NONE", fg = c.blue, gui = "NONE"     },
-    Cursor       { fg = "NONE", bg = "NONE", gui = "reverse"  },
+    Conceal      { bg = "NONE", fg = c.blue, gui = "NONE"    },
+    Cursor       { fg = "NONE", bg = "NONE", gui = "reverse" },
     lCursor      { Cursor },
     CursorIM     { Cursor },
-    Directory    { bg = "NONE",       fg = c.blue, gui = "NONE" },
-    DiffAdd      { bg = c.blue.da(88),  fg = "NONE", gui = "NONE" },
-    DiffChange   { bg = c.orange.da(88),   fg = "NONE", gui = "NONE" },
+    Directory    { bg = "NONE",          fg = c.blue, gui = "NONE" },
+    DiffAdd      { bg = c.blue.da(88),   fg = "NONE", gui = "NONE" },
+    DiffChange   { bg = c.orange.da(88), fg = "NONE", gui = "NONE" },
     DiffDelete   { bg = c.red.da(88),    fg = "NONE", gui = "NONE" },
     DiffText     { bg = c.orange.da(80), fg = "NONE", gui = "NONE" },
-    EndOfBuffer  { bg = "NONE",       fg = c.bg2,  gui = "NONE" },
+    EndOfBuffer  { bg = "NONE",          fg = c.bg2,  gui = "NONE" },
     TermCursor   { Cursor },
     TermCursorNC { Cursor },
-    ErrorMsg     { bg = c.red.da(80), fg = c.red, gui = "NONE" },
-    VertSplit    { bg = "NONE",    fg = c.bg2, gui = "NONE" },
-    Folded       { bg = c.bg1,     fg = c.bg4, gui = "NONE" },
-    FoldColumn   { Normal, fg = c.gray, gui = "NONE"        },
+    ErrorMsg     { bg = c.red.da(80), fg = c.red,  gui = "NONE" },
+    VertSplit    { bg = "NONE",       fg = c.bg2,  gui = "NONE" },
+    Folded       { bg = c.bg1,        fg = c.bg4,  gui = "NONE" },
+    FoldColumn   { Normal,            fg = c.gray, gui = "NONE" },
     SignColumn   { Normal },
     Search       { bg = c.gray, fg = c.bg },
     IncSearch    { Search },
@@ -128,9 +110,9 @@ local theme = lush(function()
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
 
-    LspReferenceText                     { bg = c.bg1.li(6), fg = "NONE", gui = "underline" },
-    LspReferenceRead                     { bg = c.bg1.li(6), fg = "NONE", gui = "underline" },
-    LspReferenceWrite                    { bg = c.bg1.li(6), fg = "NONE", gui = "underline" },
+    LspReferenceText                     { bg = c.bg1.li(6), fg = "NONE" },
+    LspReferenceRead                     { bg = c.bg1.li(6), fg = "NONE" },
+    LspReferenceWrite                    { bg = c.bg1.li(6), fg = "NONE" },
     LspSignatureActiveParameter          { bg = c.bg1.li(6), fg = c.purple, gui = "underline,bold" },
 
     LspCodeLens          { fg = Comment.fg.li(20) },

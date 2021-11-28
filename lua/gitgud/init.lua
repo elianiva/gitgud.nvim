@@ -291,23 +291,27 @@ local theme = lush(function()
     DiffviewFilePanelInsertion  { SignAdd },
     DiffviewFilePanelDeletion   { SignDelete },
 
-    -- nvim-notify
-    NotifyERROR      { fg = c.red    },
-    NotifyWARN       { fg = c.yellow },
-    NotifyINFO       { fg = c.green  },
-    NotifyDEBUG      { fg = c.blue   },
-    NotifyTRACE      { fg = c.white  },
-    NotifyERRORTitle { fg = c.red  },
-    NotifyWARNTitle  { fg = c.yellow  },
-    NotifyINFOTitle  { fg = c.green  },
-    NotifyDEBUGTitle { fg = c.blue  },
-    NotifyTRACETitle { fg = c.white  },
+    -- -- nvim-notify
+    -- NotifyERROR      { fg = c.red    },
+    -- NotifyWARN       { fg = c.yellow },
+    -- NotifyINFO       { fg = c.green  },
+    -- NotifyDEBUG      { fg = c.blue   },
+    -- NotifyTRACE      { fg = c.white  },
+    -- NotifyERRORTitle { fg = c.red    },
+    -- NotifyWARNTitle  { fg = c.yellow },
+    -- NotifyINFOTitle  { fg = c.green  },
+    -- NotifyDEBUGTitle { fg = c.blue   },
+    -- NotifyTRACETitle { fg = c.white  },
 
     -- HOP
     HopNextKey { fg = "#ff007c" },
     HopNextKey1 { fg = "#00dfff" },
     HopNextKey2 { fg = "#2b8db3" },
     HopUnmatched { fg = c.bg3 },
+
+    -- ORGMODE
+    OrgDONE  { fg = c.green, gui = "bold" },
+    OrgTODO  { fg = c.red,   gui = "bold" },
   }
 end)
 

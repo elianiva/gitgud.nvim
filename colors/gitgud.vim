@@ -118,16 +118,6 @@ highlight! link MsgSeparator Normal
 highlight! link NormalNC Normal
 highlight! link SignColumn Normal
 highlight NormalFloat guifg=NONE guibg=#2E343E guisp=NONE gui=NONE blend=NONE
-highlight NotifyDEBUG guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyDEBUGTitle guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyERROR guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyERRORTitle guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyINFO guifg=#8CDA8B guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyINFOTitle guifg=#8CDA8B guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyTRACE guifg=#C9D1D9 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyTRACETitle guifg=#C9D1D9 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyWARN guifg=#F2E18C guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight NotifyWARNTitle guifg=#F2E18C guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Number guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSNumber Number
 highlight NvimTreeExecFile guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
@@ -148,6 +138,8 @@ highlight Operator guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSOperator Operator
 highlight! link htmlEndTag Operator
 highlight! link htmlTag Operator
+highlight OrgDONE guifg=#8CDA8B guibg=NONE guisp=NONE gui=bold blend=NONE
+highlight OrgTODO guifg=#FF7A70 guibg=NONE guisp=NONE gui=bold blend=NONE
 highlight Pmenu guifg=#66697A guibg=#272D35 guisp=NONE gui=NONE blend=NONE
 highlight! link CmpItemKind Pmenu
 highlight! link CmpItemKindDefault Pmenu

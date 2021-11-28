@@ -38,8 +38,8 @@ local theme = lush(function()
     MsgSeparator { Normal },
     MoreMsg      { bg = "NONE", fg = c.aqua, gui = "NONE" },
     NonText      { EndOfBuffer },
-    NormalFloat  { bg = c.bg2.da(30), fg = "NONE", gui = "NONE" },
-    FloatBorder  { bg = c.bg2.da(30), fg = c.gray, gui = "NONE" },
+    NormalFloat  { bg = c.bg2.da(12), fg = "NONE", gui = "NONE" },
+    FloatBorder  { bg = c.bg2.da(12), fg = c.gray, gui = "NONE" },
     NormalNC     { Normal },
     Pmenu        { bg = c.bg1.da(10),   fg = c.gray.da(20),  gui = "NONE" },
     PmenuSel     { bg = c.bg1.li(5),    fg = c.white.li(20), gui = "NONE" },
@@ -278,6 +278,7 @@ local theme = lush(function()
     CmpDocumentation        { Pmenu, fg = "NONE" },
     CmpDocumentationBorder  { Pmenu, fg = "NONE" },
     CmpItemKind             { Pmenu },
+    CmpItemKindDefault      { Pmenu },
     CmpItemMenu             { Pmenu },
 
     -- diffview

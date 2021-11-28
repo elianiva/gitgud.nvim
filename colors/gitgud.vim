@@ -76,7 +76,7 @@ highlight Exception guifg=#D2A8FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSException Exception
 highlight Float guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSFloat Float
-highlight FloatBorder guifg=#828597 guibg=#252A32 guisp=NONE gui=NONE blend=NONE
+highlight FloatBorder guifg=#828597 guibg=#2E343E guisp=NONE gui=NONE blend=NONE
 highlight FlutterWidgetGuides guifg=#6A6C81 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight FoldColumn guifg=#828597 guibg=#23282F guisp=NONE gui=NONE blend=NONE
 highlight Folded guifg=#5C5E70 guibg=#2B323B guisp=NONE gui=NONE blend=NONE
@@ -117,7 +117,7 @@ highlight! link MsgArea Normal
 highlight! link MsgSeparator Normal
 highlight! link NormalNC Normal
 highlight! link SignColumn Normal
-highlight NormalFloat guifg=NONE guibg=#252A32 guisp=NONE gui=NONE blend=NONE
+highlight NormalFloat guifg=NONE guibg=#2E343E guisp=NONE gui=NONE blend=NONE
 highlight NotifyDEBUG guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight NotifyDEBUGTitle guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight NotifyERROR guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
@@ -150,6 +150,7 @@ highlight! link htmlEndTag Operator
 highlight! link htmlTag Operator
 highlight Pmenu guifg=#66697A guibg=#272D35 guisp=NONE gui=NONE blend=NONE
 highlight! link CmpItemKind Pmenu
+highlight! link CmpItemKindDefault Pmenu
 highlight! link CmpItemMenu Pmenu
 highlight PmenuSbar guifg=NONE guibg=#2B323B guisp=NONE gui=NONE blend=NONE
 highlight PmenuSel guifg=#D5DBE1 guibg=#343C46 guisp=NONE gui=NONE blend=NONE

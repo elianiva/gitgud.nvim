@@ -1,4 +1,4 @@
-let g:colors_name = "gitgud"
+let g:colors_name = "gitgud_dark"
 set background=dark
 highlight Bold guifg=NONE guibg=NONE guisp=NONE gui=bold blend=NONE
 highlight Boolean guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
@@ -138,8 +138,6 @@ highlight Operator guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSOperator Operator
 highlight! link htmlEndTag Operator
 highlight! link htmlTag Operator
-highlight OrgDONE guifg=#8CDA8B guibg=NONE guisp=NONE gui=bold blend=NONE
-highlight OrgTODO guifg=#FF7A70 guibg=NONE guisp=NONE gui=bold blend=NONE
 highlight Pmenu guifg=#66697A guibg=#272D35 guisp=NONE gui=NONE blend=NONE
 highlight! link CmpItemKind Pmenu
 highlight! link CmpItemKindDefault Pmenu

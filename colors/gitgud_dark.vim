@@ -26,6 +26,16 @@ highlight! link ColorColumn CursorLine
 highlight! link CursorColumn CursorLine
 highlight! link QuickFixLine CursorLine
 highlight CursorLineNr guifg=#7AC1FF guibg=NONE guisp=NONE gui=bold blend=NONE
+highlight DapBreakpoint guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight DapBreakpointCondition guifg=#F8A65D guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight DapBreakpointRejected guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight DapLogPoint guifg=#F2E18C guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight DapStopPoint guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight DapUIBreakpointsCurrentLine guifg=#7AC1FF guibg=NONE guisp=NONE gui=bold blend=NONE
+highlight DapUIBreakpointsLine guifg=#828597 guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight DapUIBreakpointsPath guifg=#A3D6FF guibg=NONE guisp=NONE gui=underline blend=NONE
+highlight DapUIDecoration guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight DapUIScope guifg=#7AC1FF guibg=#2B323B guisp=NONE gui=bold blend=NONE
 highlight Debug guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight Delimiter guifg=#9AA8B7 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSPunctBracket Delimiter
@@ -66,7 +76,6 @@ highlight DiffAdd guifg=NONE guibg=#00182E guisp=NONE gui=NONE blend=NONE
 highlight DiffChange guifg=NONE guibg=#271302 guisp=NONE gui=NONE blend=NONE
 highlight DiffDelete guifg=NONE guibg=#2E0300 guisp=NONE gui=NONE blend=NONE
 highlight DiffText guifg=NONE guibg=#401F03 guisp=NONE gui=NONE blend=NONE
-highlight DiffviewVertSplit guifg=#23282F guibg=#23282F guisp=NONE gui=NONE blend=NONE
 highlight Directory guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight EndOfBuffer guifg=#343C46 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link NonText EndOfBuffer
@@ -105,7 +114,6 @@ highlight LspReferenceRead guifg=NONE guibg=#363E49 guisp=NONE gui=NONE blend=NO
 highlight LspReferenceText guifg=NONE guibg=#363E49 guisp=NONE gui=NONE blend=NONE
 highlight LspReferenceWrite guifg=NONE guibg=#363E49 guisp=NONE gui=NONE blend=NONE
 highlight LspSignatureActiveParameter guifg=#D2A8FF guibg=#363E49 guisp=NONE gui=underline,bold blend=NONE
-highlight LspTroubleIndent guifg=#6A6C81 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSConstMacro Macro
 highlight! link TSFuncMacro Macro
 highlight MatchParen guifg=NONE guibg=#2B323B guisp=NONE gui=underline blend=NONE
@@ -128,7 +136,6 @@ highlight NvimTreeGitStaged guifg=#8CDA8B guibg=NONE guisp=NONE gui=NONE blend=N
 highlight NvimTreeImageFile guifg=#D2A8FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight NvimTreeIndentMarker guifg=#828597 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight NvimTreeNormal guifg=#BDC7D0 guibg=#1C2026 guisp=NONE gui=NONE blend=NONE
-highlight! link DiffviewNormal NvimTreeNormal
 highlight NvimTreeOpenedFolderName guifg=#7AC3FF guibg=NONE guisp=NONE gui=italic blend=NONE
 highlight! link NvimTreeOpenedFile NvimTreeOpenedFolderName
 highlight NvimTreeRootFolder guifg=#2E9DFF guibg=NONE guisp=NONE gui=NONE blend=NONE
@@ -157,14 +164,8 @@ highlight Search guifg=#23282F guibg=#828597 guisp=NONE gui=NONE blend=NONE
 highlight! link IncSearch Search
 highlight! link Substitute Search
 highlight SignAdd guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight! link DiffviewFilePanelInsertion SignAdd
-highlight! link DiffviewStatusAdded SignAdd
 highlight SignChange guifg=#F8A65D guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight! link DiffviewStatusModified SignChange
-highlight! link DiffviewStatusRenamed SignChange
 highlight SignDelete guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
-highlight! link DiffviewFilePanelDeletion SignDelete
-highlight! link DiffviewStatusDeleted SignDelete
 highlight Special guifg=#A3D6FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link SpecialChar Special
 highlight SpecialComment guifg=#FF7A70 guibg=NONE guisp=NONE gui=NONE blend=NONE
@@ -193,12 +194,15 @@ highlight TSNamespace guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight TSParameter guifg=#C9D1D9 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link TSParameterReference TSParameter
 highlight TSStrike guifg=NONE guibg=NONE guisp=NONE gui=strikethrough blend=NONE
+highlight! link DapUIValue TSString
 highlight! link TSStringRegex TSString
 highlight TSTagAttribute guifg=#7AC1FF guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight TSText guifg=#C9D1D9 guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight! link DapUIType TSType
 highlight TSURI guifg=NONE guibg=NONE guisp=NONE gui=underline blend=NONE
 highlight TSUnderline guifg=NONE guibg=NONE guisp=NONE gui=underline blend=NONE
 highlight TSVariable guifg=#C9D1D9 guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight! link DapUIVariables TSVariable
 highlight TSVariableBuiltin guifg=#F8A65D guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight TSWarning guifg=#FF7A70 guibg=NONE guisp=NONE gui=bold blend=NONE
 highlight TabLine guifg=#C9D1D9 guibg=#2B323B guisp=NONE gui=NONE blend=NONE

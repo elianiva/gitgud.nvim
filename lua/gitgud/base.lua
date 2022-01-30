@@ -263,9 +263,6 @@ local get_spec = function(theme)
       StatusLineAccent    { StatusLine, fg = c.fg.li(40) },
       StatusLineNC        { bg = c.bg1.li(5), fg = c.gray },
 
-      -- lsp-trouble.nvim
-      LspTroubleIndent    { fg = c.bg4.li(10) },
-
       -- tabline stuff
       TabLine               { bg = c.bg1, fg = c.fg, gui = "NONE" },
       TabLineFill           { bg = c.bg1, fg = c.fg, gui = "NONE" },
@@ -278,7 +275,7 @@ local get_spec = function(theme)
       TabLineInformation    { DiagnosticSignInfo },
 
       -- which-key.nvim
-      WhichKeyFloat       { bg = c.bg1 },
+      WhichKeyFloat         { bg = c.bg1 },
 
       -- nvim-cmp
       CmpDocumentation        { Pmenu, fg = "NONE" },
@@ -287,21 +284,28 @@ local get_spec = function(theme)
       CmpItemKindDefault      { Pmenu },
       CmpItemMenu             { Pmenu },
 
-      -- diffview
-      DiffviewNormal              { NvimTreeNormal },
-      DiffviewVertSplit           { fg = c.bg, bg = c.bg },
-      DiffviewStatusAdded         { SignAdd },
-      DiffviewStatusModified      { SignChange },
-      DiffviewStatusRenamed       { SignChange },
-      DiffviewStatusDeleted       { SignDelete },
-      DiffviewFilePanelInsertion  { SignAdd },
-      DiffviewFilePanelDeletion   { SignDelete },
-
       -- HOP
-      HopNextKey                  { fg = "#ff007c" },
-      HopNextKey1                 { fg = "#00dfff" },
-      HopNextKey2                 { fg = "#2b8db3" },
-      HopUnmatched                { fg = c.bg3 },
+      HopNextKey              { fg = "#ff007c" },
+      HopNextKey1             { fg = "#00dfff" },
+      HopNextKey2             { fg = "#2b8db3" },
+      HopUnmatched            { fg = c.bg3 },
+
+      -- DAP
+      DapBreakpoint           { fg = c.red },
+      DapBreakpointCondition  { fg = c.orange },
+      DapLogPoint             { fg = c.yellow },
+      DapStopPoint            { fg = c.blue },
+      DapBreakpointRejected   { fg = c.red },
+
+      -- DAP UI
+      DapUIVariables                { TSVariable },
+      DapUIValue                    { TSString },
+      DapUIType                     { TSType },
+      DapUIDecoration               { fg = c.blue },
+      DapUIScope                    { fg = c.blue, bg = c.bg1, gui = "bold" },
+      DapUIBreakpointsCurrentLine   { fg = c.blue, gui = "bold" },
+      DapUIBreakpointsLine          { fg = c.gray },
+      DapUIBreakpointsPath          { fg = c.aqua, gui = "underline" },
     }
   end)
 end

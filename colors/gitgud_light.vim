@@ -119,6 +119,13 @@ highlight! link TSFuncMacro Macro
 highlight MatchParen guifg=NONE guibg=#F5F7FA guisp=NONE gui=underline blend=NONE
 highlight MoreMsg guifg=#043772 guibg=NONE guisp=NONE gui=NONE blend=NONE
 highlight! link Question MoreMsg
+highlight NeoTreeCursorLine guifg=NONE guibg=#FFFFFF guisp=NONE gui=NONE blend=NONE
+highlight NeoTreeDirectoryName guifg=#005DC7 guibg=NONE guisp=NONE gui=bold blend=NONE
+highlight NeoTreeGitAdded guifg=#49C16B guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight NeoTreeGitModified guifg=#D7473C guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight NeoTreeGitUntracked guifg=#EED03A guibg=NONE guisp=NONE gui=NONE blend=NONE
+highlight NeoTreeNormal guifg=NONE guibg=#B399FF guisp=NONE gui=NONE blend=NONE
+highlight NeoTreeNormalNC guifg=NONE guibg=#B399FF guisp=NONE gui=NONE blend=NONE
 highlight Normal guifg=#3F5064 guibg=#FFFFFF guisp=NONE gui=NONE blend=NONE
 highlight! link ModeMsg Normal
 highlight! link MsgArea Normal

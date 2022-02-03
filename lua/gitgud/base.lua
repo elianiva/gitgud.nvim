@@ -238,6 +238,15 @@ local get_spec = function(theme)
       NvimTreeGitStaged           { fg = c.green },
       NvimTreeGitRenamed          { fg = c.orange },
 
+      -- neo-tree.lua
+      NeoTreeCursorLine    { bg = c.bg },
+      NeoTreeNormal        { bg = c.bg.da(20) },
+      NeoTreeNormalNC      { bg = c.bg.da(20) },
+      NeoTreeDirectoryName { fg = c.blue, gui = "bold" },
+      NeoTreeGitModified   { fg = c.red },
+      NeoTreeGitUntracked  { fg = c.yellow },
+      NeoTreeGitAdded      { fg = c.green },
+
       -- some fix for html related stuff
       htmlH1                  { Title },
 
